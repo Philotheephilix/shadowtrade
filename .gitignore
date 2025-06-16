@@ -1,3 +1,6 @@
 
 frontend/bun.lock
 frontend/pnpm-lock.yaml
+/x402-handler/node_modules
+x402-handler/bun.lock
+x402-handler/.env
