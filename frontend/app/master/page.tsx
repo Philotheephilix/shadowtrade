@@ -69,74 +69,17 @@ export default function MasterDashboard() {
 
       <div className="grid lg:grid-cols-3 gap-6">
         {/* Trade Signal Form */}
-        <Card className="lg:col-span-1 bg-black/40 backdrop-blur-md border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-          <CardHeader>
-            <CardTitle className="flex items-center space-x-2 text-cyan-400">
-              <Send className="w-5 h-5" />
-              <span>Create Signal</span>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleSignalSubmit} className="space-y-4">
-              <div>
-                <Label htmlFor="tokenPair" className="text-gray-300">
-                  Token Pair
-                </Label>
-                <Input
-                  id="tokenPair"
-                  placeholder="ETH/USDC"
-                  value={signalForm.tokenPair}
-                  onChange={(e) => setSignalForm({ ...signalForm, tokenPair: e.target.value })}
-                  className="bg-black/60 border-gray-700 focus:border-cyan-500 text-white"
-                />
-              </div>
-              <div>
-                <Label htmlFor="amount" className="text-gray-300">
-                  Amount
-                </Label>
-                <Input
-                  id="amount"
-                  placeholder="1.5"
-                  value={signalForm.amount}
-                  onChange={(e) => setSignalForm({ ...signalForm, amount: e.target.value })}
-                  className="bg-black/60 border-gray-700 focus:border-cyan-500 text-white"
-                />
-              </div>
-              <div>
-                <Label htmlFor="slippage" className="text-gray-300">
-                  Slippage %
-                </Label>
-                <Input
-                  id="slippage"
-                  placeholder="0.5"
-                  value={signalForm.slippage}
-                  onChange={(e) => setSignalForm({ ...signalForm, slippage: e.target.value })}
-                  className="bg-black/60 border-gray-700 focus:border-cyan-500 text-white"
-                />
-              </div>
-              <div>
-                <Label htmlFor="memo" className="text-gray-300">
-                  Memo (Optional)
-                </Label>
-                <Textarea
-                  id="memo"
-                  placeholder="Trade reasoning..."
-                  value={signalForm.memo}
-                  onChange={(e) => setSignalForm({ ...signalForm, memo: e.target.value })}
-                  className="bg-black/60 border-gray-700 focus:border-cyan-500 text-white resize-none"
-                  rows={3}
-                />
-              </div>
-              <Button
-                type="submit"
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white shadow-lg shadow-cyan-500/25"
-              >
-                <Zap className="w-4 h-4 mr-2" />
-                Broadcast Signal
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
+        <Card className="lg:col-span-1 bg-black/40 backdrop-blur-md border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 flex items-center justify-center">
+  <div style={{ width: '100%', height: '520px', overflow: 'hidden', borderRadius: '0.5rem' }}>
+    <iframe
+      src="https://uniswap-testnet.sourcehat.io/#/swap"
+      title="Uniswap Testnet Swap"
+      style={{ width: '100%', height: '600px', border: 'none', marginTop: '-40px', background: 'transparent' }}
+      className="w-full rounded-lg"
+      allowFullScreen
+    />
+  </div>
+</Card>
 
         {/* Active Signals */}
         <Card className="lg:col-span-2 bg-black/40 backdrop-blur-md border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
